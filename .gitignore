@@ -12,8 +12,8 @@ env/
 !.env.example
 
 # Docker / Postgres runtime data
-api-request/postgres/data/
 postgres/data/
+api-request/postgres/data/
 
 # Airflow
 airflow/logs/
