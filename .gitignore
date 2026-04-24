@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# Environment variables & secrets
+.env
+.env.*
+!.env.example
+
+# Docker / Postgres runtime data
+api-request/postgres/data/
+postgres/data/
+
+# Airflow
+airflow/logs/
+airflow/plugins/__pycache__/
+airflow.cfg
+airflow.db
+webserver_config.py
+
+# dbt
+dbt/my_project/target/
+dbt/my_project/dbt_packages/
+dbt/my_project/logs/
+dbt/my_project/.user.yml
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
