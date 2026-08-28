@@ -8,20 +8,9 @@ The final mart tables are ready to be consumed by BI tools such as **Power BI** 
 
 ## Architecture
 
-```
- ┌──────────────┐     ┌──────────┐     ┌──────────┐     ┌──────────┐     ┌───────────┐
- │ Weatherstack │ ──▶ │  Python  │ ──▶ │ Postgres │ ──▶ │   dbt    │ ──▶ │  Power BI │
- │     API      │     │ ingestor │     │  (raw)   │     │ (models) │     │ dashboards│
- └──────────────┘     └──────────┘     └──────────┘     └──────────┘     └───────────┘
-                            ▲                                 ▲
-                            └──────────── Airflow ────────────┘
-                                    (orchestration)
-```
-
-- **Extract & Load**: Python script calls the Weatherstack API and inserts rows into `dev.raw_weather_data`.
-- **Transform**: dbt models clean the data (staging) and build mart tables (`daily_average`, `weather_repot`).
-- **Orchestrate**: An Airflow DAG runs every 2 minutes — first ingests, then runs `dbt run`.
-
+<p align="center">
+  <img src="./assets/architecture.png" alt="Weather ELT Pipeline Architecture" width="100%">
+</p>
 ---
 
 ## Tech stack
