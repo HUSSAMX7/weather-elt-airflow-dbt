@@ -11,7 +11,7 @@ The final mart tables are ready to be consumed by BI tools such as **Power BI** 
 <p align="center">
   <img src="./assets/architecture.png" alt="Weather ELT Pipeline Architecture" width="100%">
 </p>
----
+
 
 ## Tech stack
 
